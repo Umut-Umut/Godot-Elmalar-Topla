@@ -1,0 +1,75 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/Control.gd" type="Script" id=1]
+
+[node name="Dead Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.290196, 0, 0, 1 )
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = -124.0
+margin_right = -77.0
+margin_bottom = -108.0
+rect_scale = Vector2( 5, 5 )
+text = "ÖLDÜN"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -112.0
+margin_top = 84.0
+margin_right = -2.00003
+margin_bottom = 100.0
+rect_scale = Vector2( 2, 2 )
+text = "Press R to restart"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 384.0
+margin_top = 256.0
+margin_right = 640.0
+margin_bottom = 384.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -32.0
+margin_right = 64.0
+margin_bottom = 32.0
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_Button_pressed"]
